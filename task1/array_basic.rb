@@ -6,7 +6,7 @@ def get_integer_num(label)
     output = 1
     begin
         print "#{label}"
-        output = Integer(gets.chomp)
+        output = Integer(gets.chomp,10)
         raise if (output < -1) 
     rescue
        puts 'vui long nhap kieu du lieu so nguyen'
