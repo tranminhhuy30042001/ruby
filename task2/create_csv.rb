@@ -1,6 +1,6 @@
 require "csv"
 
-MAX_LENGTH_DATA = 500000
+MAX_LENGTH_DATA = 250000
 HO = ["Nguyen","Do","Le","Ho","Vu","Vo","Phan","Bui","Ngo","Dang","Hoang","Tran","Pham","Huynh","Duong"]
 DEM = ["Van","Ha","Trang","Anh","Yen","Thu","Nga","Mai","Hoa"]
 
@@ -10,7 +10,7 @@ address = "Ho Chi Minh city"
 date = "2000/01/01"
 profile = "Like TV 100\", Some special charactor: \\ / ' $ ~ & @ # ( ;\""
 
-CSV.open("file.csv", "wb") do |csv|
+CSV.open("user_data.csv", "wb") do |csv|
   csv << ["name", "email", "phone","address","date","profile"]
   j = 0
   ascii = 65
