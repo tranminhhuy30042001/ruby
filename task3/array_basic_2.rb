@@ -18,7 +18,7 @@ p arr
 sub_arr = []
 arr.each_with_index do |element, index|
     sub_arr.push(element)
-    next if(arr[index+1] != nil && element < arr[index+1])
+    next if(arr[index+1] && element < arr[index+1])
     puts "mảng con tăng #{index}:#{sub_arr}" 
     sub_arr = []
 end
