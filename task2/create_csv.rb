@@ -1,6 +1,6 @@
 require "csv"
 
-MAX_LENGTH_DATA = 250000
+MAX_LENGTH_DATA = 100000
 HO = ["Nguyen","Do","Le","Ho","Vu","Vo","Phan","Bui","Ngo","Dang","Hoang","Tran","Pham","Huynh","Duong"]
 DEM = ["Van","Ha","Trang","Anh","Yen","Thu","Nga","Mai","Hoa"]
 

@@ -1,15 +1,15 @@
+require "pg"
+require "postgres-copy"
 require 'csv'
-require_relative './helpers'
 
-csv_name = File.join(Dir.pwd,'user_data.csv')
+conn = PG.connect("localhost", 5432, "", "", "postgres")
 
-class Array
-    def in_groups(num_groups)
-        return [] if num_groups == 0
-        slice_size = (self.size/Float(num_groups)).ceil
-        groups = self.each_slice(slice_size).to_a
-      end
-end
+#p res = conn.exec("select * from user;")
 
 
-puts -123
+sql = "\\copy tb_data (name, email, phone, address, date, profile) FROM '/home/tranminhhuy/vscode/task/task2/user_data.csv' DELIMITER ',' CSV;";
+
+res = conn.exec(sql)
+
+
+
