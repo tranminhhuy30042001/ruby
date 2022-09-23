@@ -1,5 +1,6 @@
 require 'benchmark'
 
+
 def print_memory_usage
   memory_before = `ps -o rss= -p #{Process.pid}`.to_i
   yield
