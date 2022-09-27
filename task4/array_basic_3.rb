@@ -6,11 +6,8 @@ def task4(numbers, target_sum)
     hsh = Hash.new
     numbers.each do |value|
         other_value = target_sum - value
-        if(hsh[value])
-            return [other_value,value]
-        else
-            hsh[other_value] = 1
-        end
+        return [other_value,value] if(hsh[value])
+        hsh[other_value] = 1
     end
     []
 end
